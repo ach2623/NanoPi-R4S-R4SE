@@ -17,7 +17,7 @@ on:
   #   types: started
 
 env:
-  REPO_URL: https://github.com/DHDAXCW/lede-rockchip
+  REPO_URL: https://github.com/ach2623/lede-rockchip
   REPO_BRANCH: stable
   CONFIG_FILE: configs/lean/lean.config
   DIY_SH: scripts/lean.sh
@@ -66,8 +66,8 @@ jobs:
         echo "OPENWRTROOT=$PWD" >> $GITHUB_ENV
         echo "::set-output name=OPENWRTROOT::$(echo $PWD)"
         mkdir customfeeds
-        git clone --depth=1 https://github.com/DHDAXCW/packages customfeeds/packages
-        git clone --depth=1 https://github.com/DHDAXCW/luci customfeeds/luci
+        git clone --depth=1 https://github.com/ach2623/packages customfeeds/packages
+        git clone --depth=1 https://github.com/ach2623/luci customfeeds/luci
         chmod +x ../scripts/*.sh
         ../scripts/hook-feeds.sh
 
